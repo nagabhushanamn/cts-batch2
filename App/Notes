@@ -1,0 +1,139 @@
+
+
+
+ JS
+ -------
+ 
+  -> scripting lang for web-pages in browser-envi
+  +
+  -> server-side programming lang using NodeJS.
+  
+  -> to develope stand-alone appln.
+  -> command-line tools ( testing , build tools )
+  
+  -> to develope mobile-appln
+  
+  -------------------------------------------------------
+  
+  Features
+  
+  --> functional programming lang.
+  --> OO programming lang.
+  
+  --> supports dynamic data-types
+  --> supports closures
+  
+  --> Single-threaded lang 
+  --> supports better concurrency using JS envi.
+  
+  ---------------------------------------------------------
+  
+  
+  JS lang is based on 'ECMAScript' spec.
+  
+  latest : ECMAScript 2015 or ES6
+  
+  ----------------------------------------------------------
+  
+  
+  how to run JS programs ?
+  
+  
+  we need 'JS engine'  which implemented ECMAScript spec
+  
+  every browser has own default JS-engine
+  
+  e.g
+  
+  browsers
+  
+  chrome  --> v8 ( c++ )
+  firefox --> rhino
+  safari  --> nitro
+  IE      --> chakra
+  
+  non-browser
+  
+  NodeJS  --> v8
+  JVM     --> nashorn
+  ApacheCouchDB
+  
+  -------------------------------------------------------------
+  
+  
+  JS learning resources
+  
+  
+  1. MDN Javascript
+  2. Principles of OO JS ( book )
+  3. JS Good Parts ( book )
+  
+  4. jstherightway.org
+  5. javascriptissexy.com
+  
+  ---------------------------------------------------------------
+  
+  
+  selected JS topics for today
+  
+  1. 'this' keyword
+  2. func closure
+  3. inheritance
+  4. JS with HTML page
+  5. concurrency in JS
+  
+  ---------------------------------------------------------------------
+  
+  
+  
+  
+  when initial JS loaded in browser-envi , JS engine
+  
+  --> will create 'Global Execution Context '
+  
+      global-obj  ---> 'window'  for browser.
+      this        ---> window
+      
+  
+  -----------------------------------------------------------------------
+  
+  Execution Context - phases
+  -----------------------------
+  
+  --> creation phase
+  
+      all variables are hoisted ( lifting-up ) to top of execution-context
+      and
+      will get assigned with default-value i.e 'undefined'
+      
+  
+  --> execution phase
+  
+      will execute instruction in that-order
+  
+  
+  
+  
+  -------------------------------------
+  
+  
+  day-2
+  
+  
+  --> JS with HTML
+  --> concurrency support
+  
+  --> JS library vs F.Ws
+  
+  --> Angular Basics
+  
+  
+  ---------------------------
+  
+  
+  
+  
+  
+  
+  
+  
