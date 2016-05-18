@@ -79,6 +79,8 @@
   1. 'this' keyword
   2. func closure
   3. inheritance
+  
+  
   4. JS with HTML page
   5. concurrency in JS
   
@@ -129,6 +131,112 @@
   
   
   ---------------------------
+  
+  
+  
+  
+  what JS can do with HTML page in browser-envi?
+  
+  JS  using Web APIs will bring dynamic func to HTML page.
+  
+  Web APIs  --> DOM , XHR , Timer , etc....
+  
+  all Web APIs implemented/provided by browser based w3c standards.
+  
+  
+  using DOM API
+  ----------------
+  
+   --> can create/retreive/update/delete HTML elements
+   --> can change HTML element's attribute values
+   --> can change element's style
+   --> can change element's text content
+   --> can do form-validation
+   --> can create rich UI components
+   
+  using XHR API
+  ----------------
+   --> can communicate with server async , update response in existing page ( AJAX )
+   
+  Timer API
+  -----------
+  
+  setTimeout() ,, setInterval()
+  
+  HTML-5 Web APIs
+  ----------------
+  
+    1. canvas  --> drawing eleemnts
+    2. audio/video
+    3. storage API
+    4. Geo API
+    5. WebWorker
+    
+  WebGL API
+  --------------
+  
+    --> 2D & 3D effects shapes   
+   
+  
+  ---------------------------------------
+  
+  
+  all web APIs abstracts js objs and func.
+  
+  
+  DOM --> js objects
+  
+  
+  
+  
+  ---------------------------------------
+  
+  
+  
+  How JS-programs executing in browser ?
+  how JS brings concurrency ?
+  what is callback-functions?
+  
+  ---------------------------------------
+  
+  
+  e.g
+  
+   chrome - browser
+   
+    1. JS-engine  ( v8 )
+    
+       call-stack
+       heap
+       
+    2. Web APIs
+    
+    3. callback/message queue
+    
+    4. Event-Loop
+    
+  -----------------------------------------  
+    
+    
+       
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
