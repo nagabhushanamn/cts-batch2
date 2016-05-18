@@ -220,17 +220,58 @@
     
        
     
+   complexities using plain-js
+   ---------------------------
+   
+   plain-js   ===> your-code + Web API
   
   
+   --> browser compatibility
+   --> too much code even for simple operation
+   --> performance & memory management
+   
+   
+   
+   soln:
+  
+  	    JS libraries
+  
+        a. jQuery
+        b. ....
   
   
+    limitations with jQuery
+    -----------------------
   
-  
-  
-  
-  
-  
-  
+  	--> low level JS library ( its works with DOM )  --> tight coupling with View and Behav.
+  	--> code organization is difficult.
+  	--> data-binding features
+  	--> more verbose.
+  	
+  	
+  	--------------------------------------------------
+  	
+  	
+  	best solns:
+  	
+  	use JS F.Ws  ( based on MVC or MVVM arch-patterns )
+  	
+  	
+  	1. backbone
+  	2. Angular JS     ( our focus )
+  	3. KO
+  	4. Ember
+  	
+  	UI components
+  	
+  	5. Ext-JS
+  	6. DOJO
+  	
+  	etc............
+  	
+  	
+  	-------------------------------------------------
+  	
   
   
   

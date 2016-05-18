@@ -1,0 +1,21 @@
+
+
+
+
+  MVC
+  ---------
+  
+  
+  M --> Model  ( data ---> usually loaded from server )
+  V --> View   ( HTML template )
+  C --> Controller  (   appln behv )
+  
+  
+  
+  day-3
+  ------
+  
+  --> MVVM
+  --> angular scope -object ( ViewModel )
+  --> data-binding ( 1-way , 2-way      )
+  --> case-study..
