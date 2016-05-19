@@ -1,0 +1,41 @@
+
+
+
+
+  MVC
+  ---------
+  
+  
+  M --> Model  ( data ---> usually loaded from server )
+  V --> View   ( HTML template )
+  C --> Controller  (   appln behv )
+  
+  
+  
+  
+  MVVM
+  --------
+  
+  
+  M   --> Model
+  V   --> View
+  VM  --> ViewModel
+  
+  
+  -----------------------
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

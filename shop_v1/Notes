@@ -12,10 +12,11 @@
   
   
   
-  day-3
-  ------
   
-  --> MVVM
-  --> angular scope -object ( ViewModel )
-  --> data-binding ( 1-way , 2-way      )
-  --> case-study..
+  MVVM
+  --------
+  
+  
+  M   --> Model
+  V   --> View
+  VM  --> ViewModel

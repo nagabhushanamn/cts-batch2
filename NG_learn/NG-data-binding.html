@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NG-learn</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body class="container" ng-app="demoApp">
+
+	<div class="page-header">NG - data binding</div>
+
+	<div ng-controller="UserController">
+	
+		Name : <input ng-model="name">
+	           <button class="btn btn-primary" ng-click="full()">FullName</button>
+	           <button class="btn btn-primary" ng-click="reset()">Reset</button>
+	
+				<hr/>
+				
+				Hello <span class="badge" id="nameSpan">{{::name}}</span>
+	
+	</div>
+	
+	<hr/>
+	
+	
+	<script type="text/javascript">
+	
+		//using DOM
+		/*
+		var nameField=document.getElementById('nameField');
+		var fullBtn=document.getElementById('fullBtn');
+		var resetBtn=document.getElementById('resetBtn');
+		var nameSpan=document.getElementById('nameSpan');
+	
+		
+		var name='Nag';
+		
+		
+		function nameWatcher(){
+			nameField.value=name;
+			nameSpan.innerHTML=name;
+		}
+		
+		nameWatcher();
+		
+		nameField.addEventListener('keyup',function(){
+			name=this.value;
+			nameWatcher();
+		});
+		
+		resetBtn.addEventListener('click',function(){
+			name='Nag';
+			nameWatcher();
+		}); 
+		
+
+		fullBtn.addEventListener('click',function(){
+			name='Nagabhushanam';
+			nameWatcher();
+		});
+		
+		*/
+		
+		
+		
+	</script>
+	
+	<script type="text/javascript" src="angular-1.5.5/angular.js"></script>
+
+	<script type="text/javascript">
+		
+		var mod = angular.module('demoApp', []);
+		
+		mod.controller('UserController',function($scope){
+			
+			$scope.name='Nag';
+			
+			$scope.full=function(){
+				$scope.name='Nagabhushanam';
+			};
+			$scope.reset=function(){
+				$scope.name='Nag';
+			}
+			
+			$scope.$watch('name',function(newVal,oldVal){
+				console.log('$scope.name custom-watch executing...');
+				console.log(newVal);
+				console.log(oldVal);
+			});
+			
+		});
+		
+	</script>
+
+</body>
+</html>

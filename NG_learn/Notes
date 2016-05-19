@@ -1,0 +1,61 @@
+
+
+
+
+  ng-app   --> creates '$rootScope'
+  
+  
+  
+  --> some directives will execute in existing-scope
+  		
+  	  e.g
+  	  	
+      ng-show , ng-hide , ng-click   , etc..
+      
+  --> some directives will create new child-scope    
+  
+      e.g
+      
+      ng-controller , ng-repeat  , etc..
+      
+      
+  --> some directives will create new isolated-scope 
+  
+     e.g       
+     
+       ng-view , ng-transclude , etc...
+       
+       
+       ====================================================
+       
+       
+       How angular implementing data-binding ?
+       
+       
+       
+       while creating ng-application
+      
+      
+       compilation-phase:
+       
+       for every model property in scope(s) , angular will register 'watch expression'(s) to do
+       data-binding. ( View  <====> ViewModel )
+       
+       
+       we can also register our own 'watch expression' in scope object to mionitor
+       model changes to execute custom-logic.
+       
+       ----------
+       
+       all watch expressions are executed by 'digest-loop' if model is dirty.
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       

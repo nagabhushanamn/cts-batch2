@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NG-learn</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+.ng-scope {
+	border: 1px solid red;
+	padding: 5px;
+	margin: 5px;
+}
+</style>
+</head>
+<body class="container" ng-app="demoApp">
+
+	<div class="page-header">NG - scope ( View Model )</div>
+
+	<span class="badge">{{color}}</span>
+
+
+	<div ng-controller="ColorController">
+		
+		<span class="bg-danger">ColorController</span>
+		<span class="badge">{{color}}</span>
+		
+		
+		<div ng-controller="DemoController">
+			<span class="bg-danger">DemoController</span> 
+			<span class="badge">{{color}}</span>
+			
+			<button class="btn btn-primary btn-sm" ng-click="changeColor()">change-color</button>
+			
+			<div ng-controller="ColorController">
+				<span class="bg-danger">ColorController</span>
+				<span class="badge">{{color}}</span>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div ng-controller="ColorController">
+		<span class="bg-danger">ColorController</span>
+		<span class="badge">{{color}}</span>
+	</div>
+	
+	<script type="text/javascript" src="angular-1.5.5/angular.js"></script>
+
+	<script type="text/javascript">
+		var mod = angular.module('demoApp', []);
+		
+		mod.run(function($rootScope) {
+			
+			$rootScope.color='red';
+			$rootScope.$on('color-event',function(event,data){
+				$rootScope.color=data.color;
+			});
+			
+		});
+		
+		mod.controller('ColorController', function($scope) {
+			console.log('New ColorController istance created....');
+			$scope.color='yellow';
+
+			$scope.$on('color-event',function($event,data){
+				$scope.color=data.color;
+				//$event.stopPropagation();
+			});
+			
+		});
+		
+		mod.controller('DemoController', function($scope,$rootScope) {
+			
+			console.log('New DemoController istance created....');
+			
+			$scope.changeColor=function(){
+				//$scope.color='green';
+				//$scope.$emit('color-event', {color:'green'});     // propagates the event to parent-scopes
+				//$scope.$broadcast('color-event', {color:'green'});  // propagates the event to child-scopes
+				//$rootScope.$broadcast('color-event', {color:'green'});
+				
+				//$scope.$parent.color='grey';
+				$scope.$parent.$parent.color='grey';
+				
+			};
+			
+		});
+		
+	</script>
+
+</body>
+</html>
