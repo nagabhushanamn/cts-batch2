@@ -15,15 +15,22 @@
 		canBuy : true,
 		notAvailable : false,
 		date : Date.now(), // timestamp
-		discount : 10000
+		discount : 10000,
+		images:[
+		        {thumb:'images/Laptop.png',full:''},
+		        {thumb:'images/Laptop.png',full:''}
+		        ]
 	}, {
 		name : 'Mobile',
 		price : 8000,
 		description : 'New model',
 		canBuy : true,
 		notAvailable : false,
-		date : Date.now()
-	// timestamp
+		date : Date.now(),
+		images:[
+		        {thumb:'images/Mobile.png',full:''},
+		        {thumb:'images/Mobile.png',full:''}
+		        ]
 	} ];
 	// --------------------------------------------
 

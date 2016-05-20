@@ -51,6 +51,72 @@
        
        
        
+        ====================================================
+        
+        NG - form validation
+        ----------------------
+        
+        by default , angular will validate all forms in ng-app.
+        
+        angular validate form-fields in 2 ways
+        
+        way-1 : based on HTML-5 input types ( email , date , url ,etc.. ) and validation attributes
+        way-2 : based on validation directives.
+       
+       
+       after validating , ng keeps form/form-fields following states
+       
+       -> ng-pristine
+       -> ng-dirty
+       
+       -> ng-untouched
+       -> ng-touched
+       
+       -> ng-invalid
+       -> ng-valid
+       
+       imp note : for each form , one model obj in scope object.
+       
+       
+       ========================================
+       
+       
+       
+       Angular  : declarative-programming  with 'directives'
+       
+       
+       directive  --> marker/annotation/ custom-attribute on HTML element
+                      that applies JS behav to that element.
+                      
+                      
+                we can also create custom-directive(s)
+                
+                even third-parties also provides them.
+                
+                
+                -------------------------------------      
+       
+       
+       
+       
+       
+         NG - components
+         ----------------
+         a. controller
+         b. filer
+         
+         c. directives
+         d. services
+         
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
        
        

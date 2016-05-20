@@ -26,11 +26,47 @@
 		<div ng-controller="StoreController as sc" class="list-group">  <!-- $scope -->
 			<div ng-hide="product.notAvailable" 
 			     ng-repeat="product in items | limitTo:10:0" class="list-group-item">
-				<span class="badge">{{$index+1}}</span>
-				<h3>{{product.name | uppercase}}  <small>{{product.date|date:'yyyy'}}</small> </h3>
-				<h4>{{product.price |priceDiscount:product.discount | currency:'&#8377;':2}}</h4>
-				<p>{{product.description}}</p>
-				<button ng-show="product.canBuy" class="btn btn-primary">Add to cart</button>
+				
+				<div class="row">
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<img alt="" ng-src="{{product.images[0].thumb}}" class="img-responsive" style="width: 100px">
+					</div>
+					<div class="col-xs-9 col-sm-9 col-md-9">
+						<span class="badge">{{$index+1}}</span>
+						<h3>{{product.name | uppercase}}  <small>{{product.date|date:'yyyy'}}</small> </h3>
+						<h4>{{product.price |priceDiscount:product.discount | currency:'&#8377;':2}}</h4>
+						<button ng-show="product.canBuy" class="btn btn-primary">Add to cart</button>
+						<hr/>
+						
+						<section ng-init="tab=1">
+							
+							<ul class="nav nav-tabs">
+								<li ng-class="{active:tab===1,myclass:true}"><a href ng-click="tab=1">Description</a></li>
+								<li ng-class="{active:tab===2}"><a href ng-click="tab=2">Specification</a></li>
+								<li ng-class="{active:tab===3}"><a href ng-click="tab=3">Reviews</a></li>
+							</ul>
+							
+							<div class="panel" ng-show="tab===1">
+								<div class="panel-body">
+									{{product.description}}
+								</div>
+							</div>
+							<div class="panel" ng-show="tab===2">
+								<div class="panel-body">
+									Not Yet
+								</div>
+							</div>
+							<div class="panel" ng-show="tab===3">
+								<div class="panel-body">
+									None Yet
+								</div>
+							</div>
+							
+						</section>
+						
+					</div>
+				</div>
+				
 			</div>
 		</div>
 
