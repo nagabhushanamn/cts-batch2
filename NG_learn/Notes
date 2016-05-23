@@ -111,6 +111,68 @@
        
        
        
+       --------------------
+       
+       
+       
+       
+       angular internally having jquery libraray ( jqLite ) 
+       to do DOM manipulation.
+       
+       
+       
+       
+       ----------------------------------
+       
+       
+       data-binding  will happen 'watch expression'(s)
+       
+       angular will register 'watch expression' for every model property in scope.
+       
+       all 'watch expression(s) are executed by 'digest-loop' when that model get change
+       on either-side ( View or  Component(s) ).
+       
+       
+        ----------------------------------
+        
+        imp note:
+        
+        if model get change in angular-functions ( ng-click , etc... ) digest loop
+        automatically get execute. so data-binding thru 'watch expression'
+        
+        but
+        
+        if model get change in non-angular func ( e.g jquery func , etc..) ,
+        angular will not run 'digest-loop' by default ,we have to do manually.
+        
+        how to trigger digest-loop ?
+        
+        2-ways
+        
+        scope.$apply(); --> this will run all watcher(s) from $rootScope
+        scope.$digest() --> this will run watcher(s) in current scope.
+        
+        
+       
+       
+       ----------------------------------
+       
+       reference:
+       
+       https://www.toptal.com/angular-js/angular-js-demystifying-directives
+       
+       
+       
+       =======================================
+       
+       
+       Service - components
+       
+       --------------------
+       
+       SPA  using Angular  
+       REST using Angular
+       
        
        
        
