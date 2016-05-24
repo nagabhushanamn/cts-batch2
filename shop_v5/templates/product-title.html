@@ -1,0 +1,14 @@
+<div class="row">
+	<div id="pic" class="col-xs-3 col-sm-3 col-md-3">
+		<img alt="" ng-src="{{product.images[0].thumb}}" class="img-responsive" style="width: 100px">
+	</div>
+	<div class="col-xs-9 col-sm-9 col-md-9">
+		<span class="badge">{{$index+1}}</span>
+		<h3>{{product.name | uppercase}}  <small>{{product.date|date:'yyyy'}}</small> </h3>
+		<h4>{{product.price |priceDiscount:product.discount | currency:'&#8377;':2}}</h4>
+		<button ng-show="product.canBuy" class="btn btn-primary">Add to cart</button>
+		<hr/>
+		<product-tabs></product-tabs>
+	</div>
+</div>
+

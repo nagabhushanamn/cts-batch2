@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NG-learn</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
+<style type="text/css">
+</style>
+</head>
+<body class="container" ng-app="demoApp">
+
+	<div class="page-header">NG - Promise API</div>
+
+
+
+
+	<script type="text/javascript" src="angular-1.5.5/angular.js"></script>
+
+	<script type="text/javascript">
+		var hotel = {
+			getCofee : function() {
+
+				// es-6
+				var promise = new Promise(function(resolve, reject) {
+
+					setTimeout(function() {
+						//resolve('Capicino');
+						reject('No Milk');
+					}, 5000);
+
+				});
+
+				return promise;
+
+			}
+		};
+
+		//----------------------------
+
+		var trainer = {
+			doTeach : function() {
+				console.log('teaching....');
+				console.log('req coffee');
+				var promise = hotel.getCofee();
+				console.log('got promise...');
+				promise.then(function(value) {
+					console.log('tnr : having coffee..' + value);
+				}, function(reason) {
+					console.log('tnr : oops , shud go outside '+reason);
+				});
+				console.log('teaching further... finished');
+			}
+		};
+		
+		trainer.doTeach();
+		
+	</script>
+
+	<script type="text/javascript">
+		var mod = angular.module('demoApp', []);
+	</script>
+
+
+</body>
+</html>

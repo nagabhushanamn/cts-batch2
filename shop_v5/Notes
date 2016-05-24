@@ -1,0 +1,11 @@
+
+
+
+
+  How to communicate with server-side programs using NG ?
+  
+  many ways :
+  
+   way-1 : $http
+   way-2 : $resource  ( good for to consume REST API )
+   way-3 : third-party modules

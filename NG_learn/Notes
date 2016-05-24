@@ -103,9 +103,9 @@
          NG - components
          ----------------
          a. controller
-         b. filer
-         
+         b. filter
          c. directives
+         
          d. services
          
        
@@ -160,25 +160,89 @@
        reference:
        
        https://www.toptal.com/angular-js/angular-js-demystifying-directives
-       
+       http://www.undefinednull.com/2014/07/07/practical-guide-to-prelink-postlink-and-controller-methods-of-angular-directives/
        
        
        =======================================
        
+      
+      
+      NG - services
+      --------------
+      
+      provide service(s) to other components
+      
+      features
+	  ----------
+	     
+	     --> all 'singleton' components  ( one instance per ng-app )
+	     --> they will get instantiated on demand ( Lazy )
+	    
+	    why we need service comp ?
+	    
+	    --> to have angular appln-behav which is common to
+	    all controller(s),filter(s) and directive(s) and services(s)
+	    
+	    --> to maintain application-state.
+	    
+	    
+	    e.g
+	    
+	    --> communicating with server-side programs
+	    --> routing
+	    --> i18n
+	    --> consuming REST API
+	    --> security..
+	    --> dealing with HTML 5 APIS like localstorage
+	    
+	       
        
-       Service - components
+       ----------------------------------
        
+       how to create NG-service comp ?
+       
+       
+       
+       serviceProvider ( factory )  ----create/provide--->  service-comp
+       
+       
+       
+       --------------------------------------
+       
+       
+       
+       Promise API / Pattern
        --------------------
        
-       SPA  using Angular  
-       REST using Angular
+       use: 
+       
+       to execute any func async
        
        
        
+       e.g
+       
+       hotel
+       
+           getFood(){
+           	//
+           	
+           	return promise;
+           	
+           }
        
        
+       trainer
        
-       
+             doTeach(){
+             
+             // hungry....
+             promise=hotel.getFood();// ......
+             promise.then(function(){},function(){});
+             
+             //......
+             
+             }
        
        
        
