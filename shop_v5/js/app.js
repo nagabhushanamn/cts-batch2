@@ -8,12 +8,10 @@
 
 	// --------------------------------------------
 
-	// NG- services
+	// services
 	storeModule.factory('storeService', function($q, $http) {
-		// load items from server-side
 
-		//var url = "http://localhost:3000/api/products"; ( if u have )
-		var url="products.json"
+		var url = "http://localhost:3000/api/products";
 
 		var service = {
 			loadAllItems : function() {

@@ -1,0 +1,17 @@
+{
+  "name": "NG_PM_v2",
+  "authors": [
+    "nagabhushanamn <nagabhushanamn@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

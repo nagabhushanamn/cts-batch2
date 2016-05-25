@@ -1,0 +1,12 @@
+
+
+
+In angular , we can do routing in 2 ways
+
+way-1 : using 'ngRoute' module
+
+Limitations:
+
+--> can can't nested and multiple views
+
+way-2 : using 'ui.router' module  ( third-party - Angular-UI team )
