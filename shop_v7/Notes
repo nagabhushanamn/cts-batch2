@@ -1,0 +1,22 @@
+
+
+
+
+  how to arch angular-appln?
+  
+  
+  
+    --> split into many modules
+    
+      module  ---> angular-components
+      
+      
+      on what basis we shud create module ?
+      
+      --> based comp r/s.
+      --> based appln individual func
+      
+          e.g
+          
+          products module..
+          customer module..
